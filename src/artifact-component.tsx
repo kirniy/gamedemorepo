@@ -121,7 +121,7 @@ const PartySlots = () => {
     if (runningTextRef.current) {
       runningTextRef.current.style.animation = 'none';
       runningTextRef.current.offsetHeight; // Форсируем reflow
-      runningTextRef.current.style.animation = 'marquee 15s linear infinite';
+      runningTextRef.current.style.animation = 'marquee 30s linear infinite';
     }
   };
 
@@ -282,7 +282,7 @@ const PartySlots = () => {
                    style={{color: runningTextColor}}>
                 <span className={`inline-block ${glitchIntensity > 1 ? 'glitch-intense' : ''} ${glitchIntensity > 2 ? 'flame-text' : ''} neon-text`}
                       style={{animationDuration: `${5 - glitchIntensity}s`}}>
-                  {runningText.repeat(130)}
+                  {runningText.repeat(160)}
                 </span>
               </div>
               <div className="absolute inset-0 bg-black opacity-15"></div>
