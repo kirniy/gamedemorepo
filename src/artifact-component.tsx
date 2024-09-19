@@ -121,7 +121,7 @@ const PartySlots = () => {
     if (runningTextRef.current) {
       runningTextRef.current.style.animation = 'none';
       runningTextRef.current.offsetHeight; // Форсируем reflow
-      runningTextRef.current.style.animation = 'marquee 60s linear infinite';
+      runningTextRef.current.style.animation = 'marquee 90s linear';
     }
   };
 
