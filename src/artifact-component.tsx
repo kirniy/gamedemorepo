@@ -282,7 +282,7 @@ const PartySlots = () => {
                    style={{color: runningTextColor}}>
                 <span className={`inline-block ${glitchIntensity > 1 ? 'glitch-intense' : ''} ${glitchIntensity > 2 ? 'flame-text' : ''} neon-text`}
                       style={{animationDuration: `${5 - glitchIntensity}s`}}>
-                  {runningText.repeat(160)}
+                  {runningText.repeat(220)}
                 </span>
               </div>
               <div className="absolute inset-0 bg-black opacity-15"></div>
@@ -423,7 +423,7 @@ const PartySlots = () => {
         }
         .running-text-container {
           width: 200%;
-          animation: marquee 5s linear infinite;
+          animation: marquee 3s linear infinite;
         }
         @keyframes glitch-intense {
           0% {
