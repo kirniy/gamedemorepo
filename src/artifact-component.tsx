@@ -3,7 +3,7 @@ import { Book, Gift, Star, Zap, Clock, Home, Coins } from 'lucide-react';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogClose } from '@/components/ui/dialog';
 import { Alert, AlertDescription } from '@/components/ui/alert';
 
-const SYMBOL_WEIGHTS = { "💎": 0.12, "🎁": 0.14, "🪩": 0.18, "❤️‍🔥": 0.24, "🍹": 0.36 };
+const SYMBOL_WEIGHTS = { "💎": 0.15, "🎁": 0.15, "🪩": 0.2333, "❤️‍🔥": 0.2333, "🍹": 0.2333 };
 const SYMBOLS = Object.entries(SYMBOL_WEIGHTS).flatMap(([s, w]) => Array(Math.round(w * 1000)).fill(s));
 const PAYOUTS = { "💎💎💎": 50000, "🎁🎁🎁": 20000, "🪩🪩🪩": 10000, "❤️‍🔥❤️‍🔥❤️‍🔥": 5000, "🍹🍹🍹": 2500, "💎💎": 500, "🎁🎁": 400, "🪩🪩": 300, "❤️‍🔥❤️‍🔥": 200, "🍹🍹": 100 };
 const REEL_SIZE = 20;
