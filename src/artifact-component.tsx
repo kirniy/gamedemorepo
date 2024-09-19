@@ -7,7 +7,7 @@ const SYMBOL_WEIGHTS = { "💎": 0.12, "🎁": 0.14, "🪩": 0.18, "❤️‍�
 const SYMBOLS = Object.entries(SYMBOL_WEIGHTS).flatMap(([s, w]) => Array(Math.round(w * 1000)).fill(s));
 const PAYOUTS = { "💎💎💎": 50000, "🎁🎁🎁": 20000, "🪩🪩🪩": 10000, "❤️‍🔥❤️‍🔥❤️‍🔥": 5000, "🍹🍹🍹": 2500, "💎💎": 500, "🎁🎁": 400, "🪩🪩": 300, "❤️‍🔥❤️‍🔥": 200, "🍹🍹": 100 };
 const REEL_SIZE = 20;
-const MAX_SPINS_PER_DAY = 5;
+const MAX_SPINS_PER_DAY = 10;
 
 const createReel = () => Array.from({ length: REEL_SIZE }, () => SYMBOLS[Math.floor(Math.random() * SYMBOLS.length)]);
 
@@ -36,9 +36,9 @@ const PartySlots = () => {
   const rules = [
     { icon: <Home size={24} />, text: "Party Slots - мини-игра в дополнение к основной тапалке на странице 'Home'" },
     { icon: <Coins size={24} />, text: "Баланс единый с основной игрой, выигрыши сразу зачисляются на него" },
-    { icon: <Star size={24} />, text: "Крутите слоты и выигрывайте монеты VNVNC!" },
-    { icon: <Zap size={24} />, text: "У вас есть 5 бесплатных прокруток каждый день" },
-    { icon: <Gift size={24} />, text: "Обменивайте монеты на реальные призы в клубе VNVNC" },
+    { icon: <Star size={24} />, text: "Крутите слоты и выигрывайте VNVNC коины!" },
+    { icon: <Zap size={24} />, text: "10 бесплатных прокруток каждый день" },
+    { icon: <Gift size={24} />, text: "Обменивайте коины на реальные призы от Виновницы" },
     { icon: <Clock size={24} />, text: "Прокрутки обновляются каждый день в полночь" },
   ];
 
@@ -79,7 +79,7 @@ const PartySlots = () => {
   };
 
   const getWinMessage = (win) => {
-    if (win === 0) return "ПОПРОБУЙ ЕЩЕ РАЗ ";
+    if (win === 0) return "ПОПРОБУЙ ЕЩЕ ";
     if (win <= 200) return "НЕПЛОХО ";
     if (win <= 400) return "СУПЕР ";
     if (win === 500) return "ПЯТИХАТ ";
@@ -121,7 +121,7 @@ const PartySlots = () => {
     if (runningTextRef.current) {
       runningTextRef.current.style.animation = 'none';
       runningTextRef.current.offsetHeight; // Форсируем reflow
-      runningTextRef.current.style.animation = 'marquee 30s linear infinite';
+      runningTextRef.current.style.animation = 'marquee 60s linear infinite';
     }
   };
 
